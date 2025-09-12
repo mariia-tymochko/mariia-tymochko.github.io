@@ -64,6 +64,13 @@ p{color:var(--muted); line-height:1.7; margin:.5rem 0 1rem}
 /* Portrait */
 .portrait{display:grid; place-items:center; margin:0 0 1rem; position:relative}
 .portrait img{width:min(320px, 60vw); aspect-ratio: 4/5; object-fit:cover; border-radius:28px; border:1px solid rgba(255,255,255,.08); box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.portrait .flip{all:unset; cursor:pointer; perspective:1000px}
+.portrait .flip-inner{position:relative; width:min(320px, 60vw); height:calc(min(320px,60vw)*1.25); transform-style:preserve-3d; transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.portrait .flip[aria-pressed="true"] .flip-inner{transform:rotateY(180deg)}
+.portrait .front, .portrait .back{position:absolute; inset:0; backface-visibility:hidden; border-radius:28px; overflow:hidden}
+.portrait .front{z-index:2}
+.portrait .back{transform:rotateY(180deg); display:grid; place-items:center}
+.portrait .back-card{width:100%; height:100%; display:grid; place-items:center; border-radius:28px; border:1px solid rgba(255,255,255,.08); background:linear-gradient(180deg, rgba(15,27,36,.9), rgba(15,27,36,.7)); color:var(--text); font-weight:600; text-align:center; padding:1rem; letter-spacing:.3px}
 /* fiery ring */
 .portrait::before{
   content:""; position:absolute; width:min(360px, 66vw); height:calc(min(360px,66vw)*1.25);

@@ -83,6 +83,21 @@ async function bootstrap() {
     setupSmoothAnchors();
     const containers = Array.from(document.querySelectorAll("[data-md-src]"));
     await Promise.all(containers.map(loadMarkdownInto));
+    // Flip portrait interaction
+    const flip = document.querySelector(".portrait .flip");
+    if (flip) {
+        const toggle = () => {
+            const pressed = flip.getAttribute("aria-pressed") === "true";
+            flip.setAttribute("aria-pressed", String(!pressed));
+        };
+        flip.addEventListener("click", toggle);
+        flip.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                toggle();
+            }
+        });
+    }
 }
 // Wait for DOM
 if (document.readyState === "loading") {

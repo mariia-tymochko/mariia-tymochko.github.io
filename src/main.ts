@@ -92,6 +92,22 @@ async function bootstrap(): Promise<void> {
     document.querySelectorAll<MarkdownContainer>("[data-md-src]")
   );
   await Promise.all(containers.map(loadMarkdownInto));
+
+  // Flip portrait interaction
+  const flip = document.querySelector<HTMLButtonElement>(".portrait .flip");
+  if (flip) {
+    const toggle = () => {
+      const pressed = flip.getAttribute("aria-pressed") === "true";
+      flip.setAttribute("aria-pressed", String(!pressed));
+    };
+    flip.addEventListener("click", toggle);
+    flip.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  }
 }
 
 // Wait for DOM
