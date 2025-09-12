@@ -41,6 +41,13 @@ function postProcessContent(root) {
         img.loading = "lazy";
         img.decoding = "async";
     });
+    // Turn last link in service cards into CTA button
+    if (root.closest("article.card")) {
+        const links = root.querySelectorAll("a[href]");
+        const last = links[links.length - 1];
+        if (last)
+            last.classList.add("button", "primary", "cta", "card-cta");
+    }
 }
 function setupRevealAnimations() {
     const io = new IntersectionObserver((entries) => {
