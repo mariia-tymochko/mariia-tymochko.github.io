@@ -1,0 +1,24 @@
+{
+  "name": "mariia-tymochko.github.io",
+  "version": "1.0.0",
+  "description": "<!-- **mariia-tymochko/mariia-tymochko** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariia-tymochko/mariia-tymochko.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariia-tymochko/mariia-tymochko.github.io/issues"
+  },
+  "homepage": "https://github.com/mariia-tymochko/mariia-tymochko.github.io#readme",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}

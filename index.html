@@ -1,4 +1,110 @@
-<h1>
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Марія Тимочко — Лікар інтегративної медицини</title>
+    <meta name="description" content="Персональна візитівка лікаря інтегративної медицини Марії Тимочко: консультації, супровід, підхід до здоров'я.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">MT</div>
+          <div>
+            <div class="brand-name">Марія Тимочко</div>
+            <div class="brand-tag">Лікар інтегративної медицини</div>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Головна навігація">
+          <a href="#about">Про лікаря</a>
+          <a href="#services">Послуги</a>
+          <a href="#approach">Підхід</a>
+          <a href="#faq">Питання</a>
+          <a href="#contact" class="button primary">Запис</a>
+        </nav>
+      </div>
+    </header>
 
-  привіт❤️
-</h1>
+    <main>
+      <section class="hero gradient-bg">
+        <div class="container hero-inner">
+          <div class="hero-text reveal">
+            <h1>Цілісний підхід до вашого здоров'я</h1>
+            <p>М'яко, науково обґрунтовано і персоналізовано — для добробуту тіла і розуму.</p>
+            <div class="hero-cta">
+              <a href="#services" class="button primary">Переглянути послуги</a>
+              <a href="#about" class="button ghost">Дізнатися більше</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>Про лікаря</h2>
+            <p>Кілька слів про досвід, освіту та цінності.</p>
+          </div>
+          <div class="content flow reveal" data-md-src="/content/about.md"></div>
+        </div>
+      </section>
+
+      <section id="services" class="section alt">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>Послуги</h2>
+            <p>Оберіть формат співпраці, що пасує саме вам.</p>
+          </div>
+          <div class="cards">
+            <article class="card reveal" data-md-src="/content/services/consultation.md"></article>
+            <article class="card reveal" data-md-src="/content/services/support.md"></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="approach" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>Мій підхід</h2>
+            <p>Інтеграція доказової медицини, способу життя та профілактики.</p>
+          </div>
+          <div class="content flow reveal" data-md-src="/content/approach.md"></div>
+        </div>
+      </section>
+
+      <section id="faq" class="section alt">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>Поширені питання</h2>
+            <p>Відповіді на те, що ви зазвичай питаєте.</p>
+          </div>
+          <div class="content flow reveal" data-md-src="/content/faq.md"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>Контакти</h2>
+            <p>Запис на прийом і зворотний зв'язок.</p>
+          </div>
+          <div class="content flow reveal" data-md-src="/content/contact.md"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> Марія Тимочко. Усі права захищено.</small>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="module" src="/dist/main.js"></script>
+  </body>
+  </html>
