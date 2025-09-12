@@ -61,6 +61,13 @@ p{color:var(--muted); line-height:1.7; margin:.5rem 0 1rem}
 .hero-text p{max-width:650px}
 .hero-cta{display:flex; gap:.8rem; margin-top:1rem}
 
+/* Portrait */
+.portrait{display:grid; place-items:center; margin:0 0 1rem}
+.portrait img{width:min(320px, 60vw); aspect-ratio: 4/5; object-fit:cover; border-radius:28px; border:1px solid rgba(255,255,255,.08); box-shadow:0 20px 60px rgba(0,0,0,.45), 0 0 0 8px rgba(120,230,208,.08)}
+.portrait figcaption{margin-top:.5rem; color:var(--muted); text-align:center}
+.portrait img{animation:glow 3.6s ease-in-out infinite}
+@keyframes glow{0%{box-shadow:0 20px 60px rgba(0,0,0,.45), 0 0 0 8px rgba(120,230,208,.08)} 50%{box-shadow:0 20px 60px rgba(0,0,0,.45), 0 0 0 14px rgba(120,230,208,.16)} 100%{box-shadow:0 20px 60px rgba(0,0,0,.45), 0 0 0 8px rgba(120,230,208,.08)}}
+
 /* Sections */
 .section{padding:70px 0}
 .section.alt{background:var(--bg-alt); border-block:1px solid rgba(255,255,255,.04)}
