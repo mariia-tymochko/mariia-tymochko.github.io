@@ -62,11 +62,31 @@ p{color:var(--muted); line-height:1.7; margin:.5rem 0 1rem}
 .hero-cta{display:flex; gap:.8rem; margin-top:1rem}
 
 /* Portrait */
-.portrait{display:grid; place-items:center; margin:0 0 1rem}
-.portrait img{width:min(320px, 60vw); aspect-ratio: 4/5; object-fit:cover; border-radius:28px; border:1px solid rgba(255,255,255,.08); box-shadow:0 20px 60px rgba(0,0,0,.45), 0 0 0 8px rgba(120,230,208,.08)}
-.portrait figcaption{margin-top:.5rem; color:var(--muted); text-align:center}
-.portrait img{animation:glow 3.6s ease-in-out infinite}
-@keyframes glow{0%{box-shadow:0 20px 60px rgba(0,0,0,.45), 0 0 0 8px rgba(120,230,208,.08)} 50%{box-shadow:0 20px 60px rgba(0,0,0,.45), 0 0 0 14px rgba(120,230,208,.16)} 100%{box-shadow:0 20px 60px rgba(0,0,0,.45), 0 0 0 8px rgba(120,230,208,.08)}}
+.portrait{display:grid; place-items:center; margin:0 0 1rem; position:relative}
+.portrait img{width:min(320px, 60vw); aspect-ratio: 4/5; object-fit:cover; border-radius:28px; border:1px solid rgba(255,255,255,.08); box-shadow:0 20px 60px rgba(0,0,0,.45)}
+/* fiery ring */
+.portrait::before{
+  content:""; position:absolute; width:min(360px, 66vw); height:calc(min(360px,66vw)*1.25);
+  border-radius:32px; z-index:-1; filter:blur(16px);
+  background:
+    conic-gradient(from 0deg,
+      rgba(255,120,80,.0) 0deg,
+      rgba(255,120,80,.28) 40deg,
+      rgba(255,190,90,.32) 80deg,
+      rgba(255,120,80,.28) 120deg,
+      rgba(255,120,80,.0) 160deg,
+      rgba(255,120,80,.0) 200deg,
+      rgba(255,120,80,.28) 240deg,
+      rgba(255,190,90,.32) 300deg,
+      rgba(255,120,80,.28) 340deg,
+      rgba(255,120,80,.0) 360deg);
+  animation:fire 5.5s linear infinite;
+}
+@keyframes fire{
+  0%{transform:rotate(0deg) scale(1); opacity:.75}
+  50%{transform:rotate(180deg) scale(1.02); opacity:.95}
+  100%{transform:rotate(360deg) scale(1); opacity:.75}
+}
 
 /* Sections */
 .section{padding:70px 0}
