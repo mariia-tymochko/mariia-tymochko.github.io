@@ -1,26 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-  <g stroke="#FFE0B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Needle -->
-    <path d="M3 16 L12 16"/>
-    <!-- Barrel -->
-    <rect x="12" y="12" width="12" height="8" rx="2" ry="2" fill="#1a2a34"/>
-    <!-- Measurement lines -->
-    <path d="M15 13.5 L15 18.5"/>
-    <path d="M18 13.5 L18 18.5"/>
-    <path d="M21 13.5 L21 18.5"/>
-    <!-- Plunger -->
-    <path d="M24 16 L29 11"/>
-    <path d="M27.5 8.5 L30.5 11.5"/>
-  </g>
-  <!-- subtle outline for visibility on dark bg -->
-  <g stroke="rgba(0,0,0,0.35)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".5">
-    <path d="M3 16 L12 16"/>
-    <rect x="12" y="12" width="12" height="8" rx="2" ry="2" fill="none"/>
-    <path d="M15 13.5 L15 18.5"/>
-    <path d="M18 13.5 L18 18.5"/>
-    <path d="M21 13.5 L21 18.5"/>
-    <path d="M24 16 L29 11"/>
-    <path d="M27.5 8.5 L30.5 11.5"/>
+  <g transform="rotate(-30 3 16)">
+    <!-- main -->
+    <g stroke="#FFE0B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Needle (tip at ~3,16 keeps cursor hotspot consistent) -->
+      <path d="M3 16 L12 16"/>
+      <!-- Barrel -->
+      <rect x="12" y="12" width="12" height="8" rx="2" ry="2" fill="#1a2a34"/>
+      <!-- Measurement lines -->
+      <path d="M15 13.5 L15 18.5"/>
+      <path d="M18 13.5 L18 18.5"/>
+      <path d="M21 13.5 L21 18.5"/>
+      <!-- Plunger: straight rod and straight handle -->
+      <path d="M24 16 L30 16"/>
+      <path d="M30 14 L30 18"/>
+    </g>
+    <!-- subtle outline for visibility on dark bg -->
+    <g stroke="rgba(0,0,0,0.35)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".5">
+      <path d="M3 16 L12 16"/>
+      <rect x="12" y="12" width="12" height="8" rx="2" ry="2" fill="none"/>
+      <path d="M15 13.5 L15 18.5"/>
+      <path d="M18 13.5 L18 18.5"/>
+      <path d="M21 13.5 L21 18.5"/>
+      <path d="M24 16 L30 16"/>
+      <path d="M30 14 L30 18"/>
+    </g>
   </g>
 </svg>
 
