@@ -108,6 +108,14 @@ async function bootstrap(): Promise<void> {
       }
     });
   }
+
+  // Confetti burst on hover for header booking button (progressive enhancement)
+  const confettiBtn = document.querySelector<HTMLElement>('a.button[data-confetti]');
+  if (confettiBtn) {
+    confettiBtn.addEventListener('mouseenter', () => {
+      confettiBtn.style.setProperty('--confetti-seed', String(Math.random()));
+    });
+  }
 }
 
 // Wait for DOM

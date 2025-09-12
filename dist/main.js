@@ -98,6 +98,13 @@ async function bootstrap() {
             }
         });
     }
+    // Confetti burst on hover for header booking button (progressive enhancement)
+    const confettiBtn = document.querySelector('a.button[data-confetti]');
+    if (confettiBtn) {
+        confettiBtn.addEventListener('mouseenter', () => {
+            confettiBtn.style.setProperty('--confetti-seed', String(Math.random()));
+        });
+    }
 }
 // Wait for DOM
 if (document.readyState === "loading") {
