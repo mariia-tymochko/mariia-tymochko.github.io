@@ -18,6 +18,10 @@ body{
   margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color:var(--text); background:var(--bg);
 }
+/* Custom cursor (desktop) */
+@media (pointer:fine){
+  body{cursor:url('/images/syringe.svg') 2 15, auto}
+}
 
 h1,h2,h3{font-family: Merriweather, Georgia, serif; margin:0 0 .6rem}
 h1{font-size: clamp(2rem, 3.6vw, 3rem); line-height:1.15}
