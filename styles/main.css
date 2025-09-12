@@ -171,6 +171,13 @@ p{color:var(--muted); line-height:1.7; margin:.5rem 0 1rem}
 /* Footer */
 .site-footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0; background:linear-gradient(180deg, rgba(11,18,24,0), rgba(11,18,24,.5))}
 .site-footer small{color:var(--muted)}
+.footer-inner{display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+.footer-links{display:flex; gap:12px}
+.footer-links a{color:var(--muted); text-decoration:none}
+.footer-links a:hover{color:var(--text)}
+.footer-payments{display:flex; gap:10px; align-items:center}
+.footer-payments img{width:40px; height:24px; opacity:.9; filter:drop-shadow(0 2px 6px rgba(0,0,0,.2))}
+.footer-payments img:hover{opacity:1}
 
 /* Reveal animation */
 .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease}
