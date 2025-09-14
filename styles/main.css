@@ -207,14 +207,14 @@ p{color:var(--muted); line-height:1.7; margin:.5rem 0 1rem}
   .cards{grid-template-columns:1fr}
   .hero{padding:72px 0 56px}
   /* Mobile hero adjustments */
-  .hero-grid{grid-template-columns:1fr}
+  .hero-grid{display:block}
   .portrait{width:100%}
-  .portrait{margin-bottom:1.25rem}
+  .portrait{margin-bottom:2rem}
   .portrait .flip{display:block; width:100%}
   .portrait img{width:100%}
   .portrait .flip-inner{width:100%; aspect-ratio:4/5}
-  .hero-right{position:relative; z-index:5}
-  .hero-right h1{margin-top:1.2em}
+  .hero-right{position:static}
+  .hero-right h1{margin-top:1.5em}
   .hero-left .hero-cta{margin-top:14px}
 }
 
