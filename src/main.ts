@@ -44,9 +44,26 @@ function postProcessContent(root: HTMLElement): void {
   });
   // Turn last link in service cards into CTA button
   if (root.closest("article.card")) {
-    const links = root.querySelectorAll<HTMLAnchorElement>("a[href]");
+    const article = root as HTMLElement; // article.card holds the MD
+    const links = article.querySelectorAll<HTMLAnchorElement>("a[href]");
     const last = links[links.length - 1];
-    if (last) last.classList.add("button", "primary", "cta", "card-cta");
+    if (last) {
+      last.classList.add("button", "primary", "cta", "card-cta");
+      // Ensure layout: wrap content in .card-body and place CTA last
+      const cta = last;
+      const wrapper = document.createElement("div");
+      wrapper.className = "card-body";
+      // Move all children except the CTA into wrapper
+      const children = Array.from(article.childNodes);
+      for (const node of children) {
+        if (node === cta) continue;
+        wrapper.appendChild(node);
+      }
+      // Clear and re-append in order: body then CTA
+      article.innerHTML = "";
+      article.appendChild(wrapper);
+      article.appendChild(cta);
+    }
   }
 }
 
