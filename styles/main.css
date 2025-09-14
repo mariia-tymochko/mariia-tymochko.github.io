@@ -77,6 +77,7 @@ p{color:var(--muted); line-height:1.7; margin:.5rem 0 1rem}
 }
 .hero{padding:100px 0 70px}
 .hero-inner{position:relative; min-height:40vh; display:grid; align-items:center}
+.hero-grid{display:grid; row-gap:16px}
 .hero-text p{max-width:650px}
 .hero-cta{display:flex; gap:.8rem; margin-top:1rem}
 
@@ -206,13 +207,15 @@ p{color:var(--muted); line-height:1.7; margin:.5rem 0 1rem}
   .cards{grid-template-columns:1fr}
   .hero{padding:72px 0 56px}
   /* Mobile hero adjustments */
+  .hero-grid{grid-template-columns:1fr}
   .portrait{width:100%}
   .portrait{margin-bottom:1.25rem}
   .portrait .flip{display:block; width:100%}
   .portrait img{width:100%}
   .portrait .flip-inner{width:100%; aspect-ratio:4/5}
   .hero-right{position:relative; z-index:5}
-  .hero-right h1{margin-top:1em}
+  .hero-right h1{margin-top:1.2em}
+  .hero-left .hero-cta{margin-top:14px}
 }
 
 
