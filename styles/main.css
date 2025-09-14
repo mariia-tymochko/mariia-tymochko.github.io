@@ -213,10 +213,16 @@ p{color:var(--muted); line-height:1.7; margin:.5rem 0 1rem}
   .portrait{margin-bottom:2rem}
   .portrait .flip{display:block; width:100%}
   .portrait img{width:100%}
-  .portrait .flip-inner{width:100%; aspect-ratio:4/5}
+  .portrait .flip-inner{width:100%; aspect-ratio:4/5; transform:none !important}
+  /* Disable 3D layering on mobile to avoid overlap */
+  .portrait .front, .portrait .back{position:static}
+  .portrait .back{display:none}
   .hero-right{position:static; margin-top:2rem}
   .hero-right h1{margin-top:0}
   .hero-left .hero-cta{margin-top:14px}
+  /* Smaller socials so they don't push CTA off-screen */
+  .socials .social{width:64px; height:64px}
+  .socials img{width:28px; height:28px}
 }
 
 
