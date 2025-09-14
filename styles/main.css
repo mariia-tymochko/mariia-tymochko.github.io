@@ -174,6 +174,13 @@ p{color:var(--muted); line-height:1.7; margin:.5rem 0 1rem}
 .section-header{margin-bottom:1.2rem}
 .flow > * + *{margin-top:.8rem}
 
+/* Contact grid */
+.contact-grid{display:grid; grid-template-columns:1fr; gap:18px}
+.contact-right img{width:100%; height:auto; display:block; border-radius:14px; border:1px solid var(--border)}
+@media (min-width: 960px){
+  .contact-grid{grid-template-columns: 1.1fr 0.9fr; align-items:start}
+}
+
 /* Cards */
 .cards{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px}
 .card{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow); display:flex; flex-direction:column}
