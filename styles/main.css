@@ -183,6 +183,11 @@ p{color:var(--muted); line-height:1.7; margin:.5rem 0 1rem}
 .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease}
 .reveal.in{opacity:1; transform:translateY(0)}
 
+/* Contact section links */
+#contact .content a{color:var(--primary); text-decoration:underline; text-underline-offset:2px}
+#contact .content a:hover{color:#b3ffe6}
+#contact .content a:visited{color:var(--primary)}
+
 /* Responsive */
 @media (max-width: 860px){
   .site-nav{display:none}
