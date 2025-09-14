@@ -138,9 +138,9 @@ p{color:var(--muted); line-height:1.7; margin:.5rem 0 1rem}
 
 /* Socials */
 .socials{display:flex; justify-content:center; gap:14px; margin-top:14px}
-.socials .social{width:44px; height:44px; border-radius:999px; display:grid; place-items:center; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); transition:transform .2s ease, background .2s ease}
+.socials .social{width:88px; height:88px; border-radius:999px; display:grid; place-items:center; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); transition:transform .2s ease, background .2s ease}
 .socials .social:hover{transform:translateY(-2px); background:rgba(255,255,255,.1)}
-.socials img{width:22px; height:22px}
+.socials img{width:36px; height:36px}
 
 /* Confetti on hover for .button[data-confetti] */
 .button[data-confetti]{position:relative; overflow:visible}
