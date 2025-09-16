@@ -188,6 +188,31 @@ p{color:var(--muted); line-height:1.7; margin:.5rem 0 1rem}
 .card h3{margin-bottom:.4rem}
 .card .card-cta{margin-top:1rem; align-self:flex-start}
 
+/* Price badge */
+.price-badge{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:.4rem .8rem; margin:.4rem 0 1rem; font-weight:700; letter-spacing:.3px;
+  background:linear-gradient(180deg, rgba(15,27,36,.85), rgba(15,27,36,.65));
+  color:var(--text);
+  border-radius:14px;
+  position:relative;
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:
+    0 6px 20px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.12);
+}
+.price-badge::before{
+  content:""; position:absolute; inset:-6px; border-radius:18px; pointer-events:none;
+  border:1px solid rgba(255,255,255,.10);
+  background:linear-gradient(180deg, rgba(120,230,208,.10), rgba(120,230,208,0));
+  filter:blur(.2px);
+}
+.price-badge::after{
+  content:""; position:absolute; inset:-3px; border-radius:16px; pointer-events:none;
+  border:1px solid rgba(255,255,255,.10);
+}
+.price-badge{font-size:clamp(1rem, 1.4vw, 1.125rem)}
+
 /* Footer */
 .site-footer{border-top:1px solid rgba(255,255,255,.06); padding:30px 0; background:linear-gradient(180deg, rgba(11,18,24,0), rgba(11,18,24,.5))}
 .site-footer small{color:var(--muted)}
